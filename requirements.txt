@@ -1,6 +1,10 @@
 flask
+gunicorn
 numpy
+pandas
 scikit-learn==1.5.1
 xgboost
 lightgbm
-gunicorn
+joblib
+matplotlib
+gdown
