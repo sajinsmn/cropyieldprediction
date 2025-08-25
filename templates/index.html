@@ -126,16 +126,16 @@
         <div class="row justify-content-center">
             <div class="col-lg-10 col-xl-8">
                 <div class="text-center mb-4">
-                    <h1><i class="fa-solid fa-leaf me-2"></i>Crop Yield Predictor</h1>
+                    <h1 style="color: #615e20;"><i class="fa-solid fa-leaf me-2"></i>Crop Yield Predictor</h1>
                 </div>
 
                 <div class="glass-card">
-                    <h2 class="text-center mb-4">Enter Crop & Environmental Data</h2>
+                    <h2 class="text-center mb-4" style="color: #615e20;">Enter Crop & Environmental Data</h2>
                     <form action="/predict" method="post">
                         <div class="row g-4">
                             
                             <div class="col-md-6">
-                                <label for="Year" class="form-label">Year</label>
+                                <label for="Year" class="form-label" style="color: #615e20;">Year</label>
                                 <div class="input-group">
                                     <span class="input-group-text"><i class="fa-solid fa-calendar-days"></i></span>
                                     <input type="number" class="form-control with-icon" name="Year" placeholder="e.g., 2024">
@@ -143,7 +143,7 @@
                             </div>
                             
                             <div class="col-md-6">
-                                <label for="average_rain_fall_mm_per_year" class="form-label">Average Rainfall (mm/year)</label>
+                                <label for="average_rain_fall_mm_per_year" class="form-label" style="color: #615e20;">Average Rainfall (mm/year)</label>
                                 <div class="input-group">
                                     <span class="input-group-text"><i class="fa-solid fa-cloud-rain"></i></span>
                                     <input type="number" class="form-control with-icon" name="average_rain_fall_mm_per_year" step="0.01" placeholder="e.g., 1200.50">
@@ -151,7 +151,7 @@
                             </div>
                             
                             <div class="col-md-6">
-                                <label for="pesticides_tonnes" class="form-label">Pesticides (tonnes)</label>
+                                <label for="pesticides_tonnes" class="form-label" style="color: #615e20;">Pesticides (tonnes)</label>
                                 <div class="input-group">
                                     <span class="input-group-text"><i class="fa-solid fa-spray-can-sparkles"></i></span>
                                     <input type="number" class="form-control with-icon" name="pesticides_tonnes" step="0.01" placeholder="e.g., 500.75">
@@ -159,7 +159,7 @@
                             </div>
                             
                             <div class="col-md-6">
-                                <label for="avg_temp" class="form-label">Average Temperature (°C)</label>
+                                <label for="avg_temp" class="form-label" style="color: #615e20;">Average Temperature (°C)</label>
                                 <div class="input-group">
                                     <span class="input-group-text"><i class="fa-solid fa-temperature-half"></i></span>
                                     <input type="number" class="form-control with-icon" name="avg_temp" step="0.01" placeholder="e.g., 25.5">
@@ -265,7 +265,7 @@
                                         <option value="Sweden">Sweden</option>
                                         <option value="Switzerland">Switzerland</option>
                                         <option value="Tajikistan">Tajikistan</option>
-                                        <option value="Thailand">Thailand</option>
+                                        <option value="Thailand">Thailand</_option>
                                         <option value="Tunisia">Tunisia</option>
                                         <option value="Turkey">Turkey</option>
                                         <option value="Uganda">Uganda</option>
@@ -280,7 +280,7 @@
                             <div class="col-md-6">
                                 <label for="Item" class="form-label">Crop</label>
                                 <div class="input-group">
-                                     <span class="input-group-text"><i class="fa-solid fa-wheat-awn"></i></span>
+                                    <span class="input-group-text"><i class="fa-solid fa-wheat-awn"></i></span>
                                     <select class="form-select with-icon" name="Item">
                                         <option selected disabled>Select a Crop</option>
                                         <option value="Maize">Maize</option>
@@ -321,7 +321,7 @@
 
                     {% if prediction %}
                     <div class="prediction-result text-center">
-                        <h2>Predicted Yield (hg/ha):</h2>
+                        <h2>Predicted Yield:</h2>
                         <h3>{{ prediction }}</h3>
                     </div>
                     {% endif %}
