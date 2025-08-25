@@ -3,23 +3,20 @@ import numpy as np
 import pickle
 import sklearn
 import os
-import requests
+import gdown  # ✅ use gdown for Google Drive download
 
 print("✅ sklearn version:", sklearn.__version__)
 
 # ==============================
-# Direct Google Drive Download
+# Google Drive Download with gdown
 # ==============================
-# Replace this with your direct download link
-RF_FILE_URL = "https://drive.google.com/uc?export=download&id=1IlSdQ_BenMyelaNYkXrZ8EgQjyLcVHQH"
+RF_FILE_URL = "https://drive.google.com/uc?id=1IlSdQ_BenMyelaNYkXrZ8EgQjyLcVHQH"
 RF_FILE_PATH = "rf.pkl"
 
 # Download rf.pkl if not exists
 if not os.path.exists(RF_FILE_PATH):
-    print("📥 Downloading rf.pkl from Google Drive...")
-    r = requests.get(RF_FILE_URL, allow_redirects=True)
-    with open(RF_FILE_PATH, "wb") as f:
-        f.write(r.content)
+    print("📥 Downloading rf.pkl from Google Drive using gdown...")
+    gdown.download(RF_FILE_URL, RF_FILE_PATH, quiet=False)
 
 # ==============================
 # Load Models
